@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>I’m Sorry, Lulu 🐰</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(#ffdce0, #fff6f8);
+      overflow-x: hidden;
+    }
+    header, section {
+      padding: 40px 20px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      animation: fadeIn 2s ease;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .button {
+      background: #ffb6c1;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1rem;
+      margin-top: 20px;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .button:hover {
+      background: #ff92a9;
+    }
+    .character {
+      max-width: 150px;
+      margin: 20px auto;
+      display: block;
+    }
+    @keyframes fadeIn {
+      0% {opacity: 0; transform: translateY(-20px);}
+      100% {opacity: 1; transform: translateY(0);}
+    }
+    .heartfall {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      background-image: url('https://i.ibb.co/6DZ7JyL/heartfall.gif');
+      background-size: cover;
+      opacity: 0.2;
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <div class="heartfall"></div>
+  <header>
+    <h1>I’m Sorry, Lulu 🐰</h1>
+    <img class="character" src="https://i.ibb.co/MZ0WfDT/sad-dodo.png" alt="Dodo Apologizing">
+    <button class="button" onclick="scrollToMessage()">Let Dodo Say Sorry 🐤</button>
+  </header>
+
+  <section id="message">
+    <h2>From Dodo’s Heart</h2>
+    <p>Dear Lulu,<br><br>
+    I know I hurt you, and it breaks my heart more than I can say. 😔<br>
+    You’re my light, my laughter, and my forever. I miss your smile. I miss you.<br><br>
+    I’m not perfect, but my love for you is. Please give me a chance to make it right. 💞</p>
+    <img class="character" src="https://i.ibb.co/fGTRrhX/lulu-thinking.png" alt="Lulu Thinking">
+  </section>
+
+  <section>
+    <h2>Forgive Dodo?</h2>
+    <button class="button" onclick="alert('You just made Dodo the happiest bird alive! ❤️')">Yes, I forgive you 🥹</button>
+    <button class="button" onclick="alert('Dodo will wait forever, Lulu... 🕊️')">Still Thinking... 🤔</button>
+  </section>
+
+  <section>
+    <h2>Our Moments</h2>
+    <p>(Gallery will be here — add your favorite photos together!)</p>
+  </section>
+
+  <section>
+    <h2>Yours Always,<br>Dodo 🐤</h2>
+    <img class="character" src="https://i.ibb.co/hYxMXj3/dodo-love.png" alt="Dodo With Heart">
+  </section>
+
+  <script>
+    function scrollToMessage() {
+      document.getElementById("message").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
